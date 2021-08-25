@@ -1,45 +1,267 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animated Login Form</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<link rel="StyleSheet" href="style.css">
+<script src="country.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<<title>Registration Form</title>
 </head>
 <body>
-	<img class="wave" src="img/wave.png">
-	<div class="container">
-		<div class="img">
-			<img src="img/bg.svg">
+<script>
+function showText(){
+var txt1=document.getElementById("fname").value;
+document.getElementById("p1").innerHTML = txt1;
+
+var txt2=document.getElementById("lname").value;
+document.getElementById('p2').innerHTML = txt2;
+
+var txt3=document.getElementById("mname").value;
+document.getElementById('p3').innerHTML = txt3;
+
+var txt4=document.getElementById("address").value;
+document.getElementById('p4').innerHTML = txt4;
+
+var txt5=document.getElementById("country").value;
+document.getElementById('p5').innerHTML = txt4;
+
+var txt6=document.getElementById("state").value;
+document.getElementById('p6').innerHTML = txt6;
+
+var txt7=document.getElementById("zcode").value;
+document.getElementById('p7').innerHTML = txt7;
+
+var txt8=document.getElementById("mail").value;
+document.getElementById('p8').innerHTML = txt8;
+
+var txt9=document.getElementById("phone").value;
+document.getElementById('p9').innerHTML = txt9;
+
+var txt10=document.getElementById("hgt").value;
+document.getElementById('p10').innerHTML = txt10;
+
+var txt11=document.getElementById("wgt").value;
+document.getElementById('p11').innerHTML = txt11;
+
+ document.getElementById("form_view").style.display='inline';
+}
+</script>
+<div class="container">
+<form name="RegForm" action="index.html">
+		<div class="onehead">
+			<h1>Registration Form</h1>
 		</div>
-		<div class="login-content">
-			<form action="index.html">
-				<img src="img/avatar.svg">
-				<h2 class="title">Welcome</h2>
-           		<div class="input-div one">
-           		   <div class="i">
-           		   		<i class="fas fa-user"></i>
-           		   </div>
-           		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
-           		   </div>
-           		</div>
-           		<div class="input-div pass">
-           		   <div class="i"> 
-           		    	<i class="fas fa-lock"></i>
-           		   </div>
-           		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
-            	   </div>
-            	</div>
-            	<a href="#">Forgot Password?</a>
-            	<input type="submit" class="btn" value="Login">
-            </form>
-        </div>
-    </div>
-    <script type="text/javascript" src="js/main.js"></script>
+		
+		<div class="row">
+			<div class="col-25">
+				<label for="fname">First Name*<span class="required-field"></span></label>	
+			</div>
+			<div class="col-75">
+			<input type="text" id="fname" name="fname" placeholder="First Name">
+			</div>
+			
+			<font color="red"><div id="error"></div></font>
+		</div>
+          
+		<div class="row">
+			<div class="col-25">
+				<label for="lname">Last Name*<span class="required-field"></span></label>
+			</div>
+			<div class="col-75">
+			<input type="text" id="lname" name="lname" placeholder="Last Name" required>
+			</div>
+			<font color="red"><div id="lerr"></div></font>
+		</div>
+		
+		<div class="row">
+			<div class="col-25">
+				<label for="mname">Middle Name</label>
+			</div>
+			<div class="col-75">
+				<input type="text" id="mname" name="mname" placeholder="Middle Name">
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-25">
+			<label for="address">Address*<span class="required-field"></span></label>
+			</div>
+				<div class="col-75">
+      			<textarea type="text"name="address" id="address"  placeholder="Address" required></textarea>
+			</div>
+			<font color="red"><div id="add"></div></font>
+		</div>
+	 
+	
+		<div class="row">
+			<div class="col-25">
+				<label for="country">Country*<span class="required-field"></span></label>
+			</div>
+				<div class="col-75">
+					<select name="country" class="country" id="country">
+					<option value="">Select Country</option>
+					</select>
+				</div>
+				<font color="red"><div id="con"></div></font>
+		</div>
+	
+		<div class="row">
+			<div class="col-25">
+				<label for="state">State<span class="required-field"></span></label>
+			</div>
+			<div class="col-75">
+				<select name="state" class="state" id="state">
+					<option value="">Select State</option>
+				</select>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-25">
+				<label for="zcode">Zip Code<span class="required-field"></span></label>
+			</div>
+				<div class="col-75">
+					<input type="text" id="zcode" name="zcode" placeholder="Area Code" required>
+				</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-25">
+				<label for="email">E-Mail<span class="required-field"></span></label>
+			</div>
+				<div class="col-75">
+						<input type="text" name="email" id="mail"  placeholder="Example@gmail.com" required>
+				</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-25">
+				<label for="phonenumber">PhoneNumber<span class="required-field"></span></label>
+			</div>
+				<div class="col-75">
+					<input id="phone" type="tel" name="phone" id="phone" placeholder="Phone Number"/>
+				</div>
+		</div>
+		
+	
+		<div class="row">
+			<div class="col-25">
+				<label for="hgt">Height</label>
+			</div>
+					<div class="col-75">
+						<input type="text" id="hgt" name="height" placeholder="Inches">
+					</div>
+			</div>
+	
+		<div class="row">
+				<div class="col-25">
+					<label for="wgt">Weight</label>
+				</div>
+					<div class="col-75">
+						<input type="text" id="wgt" name="weight"  placeholder="Kgs">
+					</div>
+		</div>
+		
+</form>
+		<div class="button">
+			<button class="button" id="submit" onclick="validate();" form="RegForm">Submit</button>
+		</div>
+
+</div>
+<div style="display:none;" id="form_view">
+	<div>
+		<label> First Name :<span id="p1"></span></label>
+	</div>
+	<div>
+		<label> Last Name :<span id="p2"></span></label>
+	</div>
+	<div>
+		<label> Middle Name :<span id="p3"></span></label>
+	</div>
+	<div>
+		<label>Address :<span id="p4"></span><span id="p5"></span><span id="p6"></span> ,<span id="p7"></span></label>
+	</div>
+	<div>
+		<label> E-Mail :<span id="p8"></span></label>
+		<label> PhoneNumber :<span id="p9"></span></label>
+	</div>
+	<div>
+		<label> Height :<span id="p10"></span></label>
+		<label> Weight :<span id="p11"></span></label>
+	</div>
+
+</div>
+
 </body>
+  <script>
+   const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+ </script>
+ 
+ <script language="javascript">
+	populateCountries("country", "state");
+	
+</script>
+<script>
+function validate(fname){
+
+     var x = "";
+     if (document.getElementById('fname').value == "")/*first name validation*/
+    {
+    document.getElementById('error').innerHTML = "FirstName should Not be Empty!";
+    return false;
+    }
+    else
+    {
+    return true;
+    }
+}
+/* lastname validation*/
+function validate(lname){
+
+     var x = "";
+     if (document.getElementById('lname').value == "")/*first name validation*/
+    {
+    document.getElementById('lerr').innerHTML = "LastName should Not be Empty!";
+    return false;
+    }
+    else
+    {
+    return true;
+    }
+}
+/* lastname validation*/
+function validate(address){
+
+     var x = "";
+     if (document.getElementById('address').value == "")/*first name validation*/
+    {
+    document.getElementById('add').innerHTML = "Address should Not be Empty!";
+    return false;
+    }
+    else
+    {
+    return true;
+    }
+}
+/* Country validation*/
+function validate(country){
+
+     var x = "";
+     if (document.getElementById('country').value == "")/*first name validation*/
+    {
+    document.getElementById('con').innerHTML = "Please select your Country";
+    return false;
+    }
+    else
+    {
+    return true;
+    }
+}
+
+</script>
 </html>
